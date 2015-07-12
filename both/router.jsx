@@ -10,7 +10,7 @@ FlowRouter.route("/", {
   }
 });
 
-FlowRouter.route('/post/:_id', {
+FlowRouter.route('/:_id', {
   name: 'post',
   subscriptions: function(params) {
     this.register('singlePost', Meteor.subscribe('singlePost', params._id));
