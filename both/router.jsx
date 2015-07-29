@@ -17,15 +17,3 @@ FlowRouter.route('/post/:_id', {
     });
   }
 });
-
-FlowRouter.route('/postone', {
-  name: 'postOne',
-  subscriptions: function(params) {
-    this.register('postOne', Meteor.subscribe('singlePost', "one"));
-  },
-  action: function(params) {
-    ReactLayout.render(BlogLayout, {
-      content: <PostPage _id="one" />
-    });
-  }
-});
